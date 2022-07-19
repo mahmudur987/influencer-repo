@@ -3,12 +3,18 @@
 
 
 body {
-    width: 1440px;
-    height: 3306px;
+
     font-family: 'Oswald', sans-serif;
     font-family: 'Poppins', sans-serif;
     font-family: 'Roboto Mono', monospace;
     font-family: 'Roboto Slab', serif;
+    background-color: aliceblue;
+
+}
+
+.container {
+    width: 1440px;
+
 }
 
 
@@ -48,14 +54,14 @@ body {
 .first-div {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
-    margin: 0 196px;
-    grid-column-gap: 40px;
     justify-content: space-between;
 }
 
 .title-div h1 {
     font-size: 52px;
     font-family: poppins;
+    width: 582px;
+    height: 133px;
 }
 
 .title-div p {
@@ -70,20 +76,22 @@ body {
     color: white;
     background-color: #E02C6D;
     width: 196px;
-    height: 44px;
+    height: 52px;
     padding: 10px 24px 10px 24px;
     border-radius: 41px;
 }
 
 .title-div {
-    width: 528px;
-    height: 270px;
+    width: 540px;
+    height: 380px;
+    margin-left: 120px;
 }
 
 .camera-div {
 
     width: 440px;
     height: 414px;
+    margin-left: 100px;
 }
 
 .brands {
@@ -133,6 +141,7 @@ body {
 .collection {
     width: 329px;
     height: 476px;
+    margin-top: 30px;
 }
 
 .collection-title {
@@ -188,7 +197,7 @@ body {
     font-weight: 700;
 }
 
-footer {
+.footer {
     width: 1440px;
     height: 239px;
     background-color: #0A0826;
@@ -196,6 +205,7 @@ footer {
     justify-content: center;
     align-items: center;
     margin-top: 100px;
+    float: left;
 }
 
 .foot {
@@ -210,4 +220,44 @@ footer {
 
 .fa-brands {
     margin: 0px 20px;
+}
+
+@media screen and (max-width:688px) {
+
+
+    .first-div {
+
+        display: flex;
+        flex-direction: column-reverse;
+        width: 100%;
+    }
+
+    .head-right {
+        visibility: hidden;
+    }
+
+    .fa-cart-arrow-down {
+        visibility: visible;
+    }
+
+    .brand {
+        display: flex;
+    }
+
+    .collections {
+        grid-template-columns: repeat(1, 1fr);
+    }
+
+
+
+
+    footer {
+        background-color: #E02C6D;
+        position: relative;
+        right: 0;
+        bottom: 0%;
+        left: 0%;
+        z-index: 50;
+    }
+
 }
